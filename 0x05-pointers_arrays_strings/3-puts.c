@@ -1,20 +1,23 @@
+
 #include "main.h"
 
-
 /**
- * _puts - prints a string, followed by a newline to stdout
+ * _puts -  a function that takes a pointer to an int as parameter
+ *                and updates the value it points to to 98.
+ * @str: pointer to string
  *
- * @str: string parameter to print
- *
- * Return: nothing
-*/
+ * Return: void
+ */
 
 void _puts(char *str)
 {
-	while (*str != ' \0 ')
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		_putchar(*str + 0);
-		str++;
+		_putchar(str[i]);
+		i++;
 	}
-	_putchar(' \n ');
+	_putchar('\n');
 }
+
