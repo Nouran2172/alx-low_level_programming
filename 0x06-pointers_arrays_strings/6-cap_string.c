@@ -7,12 +7,19 @@
  * Return: 1 if true, 0 if false
  */
 
-int islower(char c)
+int isLower(char c)
 {
 	return (c >= 97 && c <= 122);
 }
 
-int isdelimiter(char c)
+
+/**
+ * isDelimiter - determines whether ascii is delimiter
+ * @c: character
+ * Return: 1 if true, 0 if false
+ */
+
+int isDelimiter(char c)
 {
 	int i;
 	char delimiter[] = " \t\n,.!?\"()()";
@@ -23,6 +30,13 @@ int isdelimiter(char c)
 	return (0);
 }
 
+
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: input string
+ * Return: string with capitalizes words
+ */
+
 char *cap_string(char *s)
 {
 	char *ptr = s;
@@ -30,9 +44,9 @@ char *cap_string(char *s)
 
 	while (*s)
 	{
-		if (delimiter(*s))
+		if (isDelimiter(*s))
 			found = 1;
-		else if (islower(*s) && found)
+		else if (isLower(*s) && found)
 		{
 			*s -= 32;
 			found = 0;
