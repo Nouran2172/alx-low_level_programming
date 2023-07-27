@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strncat - function that concatenates
+ * _strncpy - function that concatenates
  *              two strings.
  *
  * @dest: pointer to destnation input
  * @src: pointer to source input
- * @n: most number of bytes form @src
+ * @n: types of @src
  *
  * Return: @dest
  */
