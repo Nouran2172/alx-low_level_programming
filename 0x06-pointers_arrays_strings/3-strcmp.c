@@ -7,7 +7,7 @@
  *
  * Return: 1 if true, 0 if false
  */
-char *_strcmp(char *s1, char *s2)
+char _strcmp(char *s1, char *s2)
 {
 	int equal = 0;
 
