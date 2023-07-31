@@ -1,30 +1,33 @@
 #include "main.h"
-
 /**
- * leet - encodes a string into 1337
- * @c: string
- * Return: string that is encoded
+ * leet -  encodes a string into 1337.
+ * @s: string to code
+ * Return: the enconde string.
  */
-
-char *leet(char *c)
+char *leet(char *s)
 {
-	char *cp = c;
-	char Key[] = {'A', 'E', 'O', 'T', 'L'};
-	int value[] = {4, 3, 0, 7, 1};
-	unsigned int i;
+	int i;
+	int j;
+	int k;
 
-	while (*c)
+	char l[] = "oOlLeEaAtT";
+	char e[] = "0011334477";
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		j = 0;
+		k = 0;
+		while (l[j] != '\0')
 		{
-			/*32 is the difference between lower case and upper case letter*/
-			if (*c == key[i] || *c == key[i] + 32)
+			if (s[i] == l[j])
 			{
-				*c = 48 + value[i];
+				k = j;
+				s[i] = e[k];
 			}
+			j++;
 		}
-		c++;
-
+		i++;
 	}
-	return (cp);
+	return (s);
 }
